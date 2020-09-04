@@ -14,6 +14,7 @@ public class LoginPage extends PageBase{
     public LoginPage(WebDriver driver) {
         super(driver);
         driver.get("https://www.trendyol.com/login");
+
     }
 
     public boolean isLoginSuccess(String userEmail,String userPassword){

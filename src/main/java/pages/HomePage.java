@@ -9,8 +9,11 @@ public class HomePage extends PageBase{
         super(driver);
         driver.get("https://www.trendyol.com/");
     }
-    public String linkControl(String button){
+   /* public String linkControl(String button){
         click(By.id(button));
         return driver.getCurrentUrl();
     }
+    */
+
 }
+
