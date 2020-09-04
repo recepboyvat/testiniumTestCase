@@ -5,7 +5,7 @@ import org.openqa.selenium.WebDriver;
 
 public class CartPage extends PageBase{
     String addCartBtnxPath="//*[@id=\"partial-basket\"]/div/div[2]/div[2]/div[3]/div[1]/div/button[2]";
-
+    String increaseXpath="//*[@id=\"partial-basket\"]/div/div[2]/div[2]/div[3]/button";
     public CartPage(WebDriver driver) {
         super(driver);
         driver.get("https://www.trendyol.com/sepetim#/basket");
@@ -33,7 +33,7 @@ public class CartPage extends PageBase{
 
     public void deleteProducts()
     {
-        click(By.xpath("//*[@id=\"partial-basket\"]/div/div[2]/div[2]/div[3]/button"));
+        click(By.xpath(increaseXpath));
         click(By.className("btn-remove"));
     }
 

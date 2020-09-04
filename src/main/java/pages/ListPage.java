@@ -12,7 +12,7 @@ public class ListPage extends PageBase{
     String inputFormClassName="search-box";
     String searchButtonClassName="search-icon";
     String elementsClassName="p-card-chldrn-cntnr";
-    String addCartButtonClassName="add-to-bs";
+    String linkElementXpath="//*[@id=\"search-app\"]/div/div/div[2]/div[2]/div/div[1]/div[1]/a";
     String priceClassName="prc-slg";
     String addToCartXpath="//*[@id=\"product-detail-app\"]/div/div[2]/div[2]/div[2]/div[1]/button[1]";
     List<WebElement> elements;
@@ -50,8 +50,8 @@ public class ListPage extends PageBase{
         chosenElement=elements.get(random.nextInt(productCount));
 
         System.out.println("Chosen element:"+chosenElement);
-        WebElement linkelement=chosenElement.findElement(By.xpath("//*[@id=\"search-app\"]/div/div/div[2]/div[2]/div/div[1]/div[1]/a"));
-        System.out.println("href:"+linkelement.getAttribute("href"));
+        WebElement linkelement=chosenElement.findElement(By.xpath(linkElementXpath));
+      //  System.out.println("href:"+linkelement.getAttribute("href"));
         driver.get(linkelement.getAttribute("href"));
     }
     public String firstPrice()
