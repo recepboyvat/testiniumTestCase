@@ -38,7 +38,7 @@ public class Main {
             System.out.println("Anasayfaya gidilemedi");
         }
         LoginPage loginPage=new LoginPage(driver);
-        if(loginPage.isLoginSuccess("rcpbyvt@gmail.com","Rcpbyvt16."))
+        if(loginPage.isLoginSuccess("testiniumtrendyol@gmail.com","TestTrendyol123"))
         {
             System.out.println("Giris basarili");
         }
@@ -77,6 +77,9 @@ public class Main {
         cartPage.deleteProducts();
         System.out.println("Urunler silindi");
         System.out.println("Test bitti");
+
+        driver.quit();
+        service.stop();
     }
 
     }
